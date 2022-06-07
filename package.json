@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "start": "styleguidist server",
+    "build:guide" : "styleguidist build",
     "build": "rollup -c",
     "prepublishOnly": "rmdir /s lib && npm run build",
     "postbuild": "npm pack && 7z x -y *.tgz  && 7z x -y *.tar &&  del /f *.tgz *.tar && rmdir /s package"
