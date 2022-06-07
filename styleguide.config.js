@@ -10,5 +10,5 @@ module.exports = {
             ]
         }
     },
-styleguideDir : "/build"
+styleguideDir : "build"
 };
