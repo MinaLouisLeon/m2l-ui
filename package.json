@@ -1,0 +1,43 @@
+{
+  "name": "m2l-ui",
+  "version": "1.0.0",
+  "description": "m2l ui library",
+  "main": "lib/index.js",
+  "files": [
+    "/lib"
+  ],
+  "scripts": {
+    "start": "styleguidist server",
+    "build": "rollup -c",
+    "prepublishOnly": "rmdir /s lib && npm run build",
+    "postbuild": "npm pack && 7z x -y *.tgz  && 7z x -y *.tar &&  del /f *.tgz *.tar && rmdir /s package"
+  },
+  "author": "MinaLouisLeon",
+  "license": "MIT",
+  "peerDependencies": {
+    "@emotion/core": "^11.0.0",
+    "@emotion/styled": "^11.8.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@emotion/babel-plugin": "^11.9.2",
+    "@emotion/core": "^11.0.0",
+    "@emotion/styled": "^11.8.1",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "babel-loader": "^8.2.5",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-styleguidist": "^11.2.0",
+    "rollup": "^2.75.6",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "webpack": "^5.73.0"
+  }
+}
