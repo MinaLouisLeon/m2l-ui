@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import React ,{ useState } from "react";
+import PropTypes from 'prop-types';
 //usage
 /////////////////////////////////////////////////////
 // table props
@@ -572,5 +573,35 @@ const TableComp = ({
     </form>
   );
 };
+
+TableComp.defaultProps = {
+  operations : false,
+  enableIcons : false,
+  enableAddRow : false,
+  enableInsertRow : false,
+  enableEditRow : false,
+  enableDeleteRow : false,
+}
+
+TableComp.propTypes = {
+  /** Enable All Operation */
+  operations : PropTypes.bool,
+  /** Display operations icons */
+  enableIcons : PropTypes.bool,
+  /** Enable Add Row Function */
+  enableAddRow : PropTypes.bool,
+  /** Enable Insert Row */
+  enableInsertRow : PropTypes.bool,
+  /** Enable row edit */
+  enableEditRow : PropTypes.bool,
+  /** Enable delete row */
+  enableDeleteRow : PropTypes.bool,
+  /** return array object similar to data source*/
+  onDataChange : PropTypes.func,
+  /** array of object have data with dataIndex:value */
+  dataSource : PropTypes.array,
+  /** array of object containe column header name with dataIndex */
+  columns : PropTypes.array,
+}
 
 export default TableComp;
