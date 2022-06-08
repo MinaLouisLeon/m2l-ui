@@ -2,8 +2,6 @@ react table component with edit,delete,add and insert rows fumctions
 
 ### Enable all operations
 ```jsx
-import TableComp from './TableComp';
-
 const columns = [
   {
     name: "First Name",
@@ -39,8 +37,6 @@ for(let i=0;i<5;i++){
 ### Enable All with Icons
 
 ```jsx
-import TableComp from './TableComp';
-
 const columns = [
   {
     name: "First Name",
@@ -75,8 +71,6 @@ for(let i=0;i<5;i++){
 
 ### opertaions props
 ```jsx
-import TableComp from './TableComp';
-
 const columns = [
   {
     name: "First Name",
